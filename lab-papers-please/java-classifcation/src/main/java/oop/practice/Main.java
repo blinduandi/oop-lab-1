@@ -27,18 +27,18 @@ public class Main {
 
     for (Creaure creature: creaturesList) {
       JsonNode jsonNode = mapper.valueToTree(creature);
-      switch (userInput) {
+      switch (Sorting.sort(creature)) {
         case "1":
-          starWars.individuals().add(entry);
+          starWars.individuals().add(jsonNode);
           break;
         case "2":
-          hitchhikers.individuals().add(entry);
+          hitchhikers.individuals().add(jsonNode);
           break;
         case "3":
-          marvel.individuals().add(entry);
+          marvel.individuals().add(jsonNode);
           break;
         case "4":
-          rings.individuals().add(entry);
+          rings.individuals().add(jsonNode);
           break;
         default:
           System.out.println("Invalid input");
