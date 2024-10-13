@@ -20,12 +20,13 @@ public class Main {
     Universe marvel = new Universe("marvel", new ArrayList<>());
     Universe rings = new Universe("rings", new ArrayList<>());
 
-    Scanner scanner = new Scanner(System.in);
+//    Scanner scanner = new Scanner(System.in);
 
-    for (JsonNode entry : data) {
-      String entryAsString = entry.toString();
-      System.out.println(entryAsString);
-      String userInput = scanner.nextLine();
+    List<Creature> creaturesList = mapper.readValue(data.toString(), new TypeReference<>() {
+    });
+
+    for (Creaure creature: creaturesList) {
+      JsonNode jsonNode = mapper.valueToTree(creature);
       switch (userInput) {
         case "1":
           starWars.individuals().add(entry);
