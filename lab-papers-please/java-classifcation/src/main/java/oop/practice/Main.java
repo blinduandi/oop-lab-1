@@ -1,5 +1,6 @@
 package oop.practice;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -21,23 +22,22 @@ public class Main {
     Universe rings = new Universe("rings", new ArrayList<>());
 
 //    Scanner scanner = new Scanner(System.in);
-
     List<Creature> creaturesList = mapper.readValue(data.toString(), new TypeReference<>() {
     });
 
-    for (Creaure creature: creaturesList) {
+    for (Creature creature: creaturesList) {
       JsonNode jsonNode = mapper.valueToTree(creature);
       switch (Sorting.sort(creature)) {
-        case "1":
+        case 1:
           starWars.individuals().add(jsonNode);
           break;
-        case "2":
+        case 2:
           hitchhikers.individuals().add(jsonNode);
           break;
-        case "3":
+        case 3:
           marvel.individuals().add(jsonNode);
           break;
-        case "4":
+        case 4:
           rings.individuals().add(jsonNode);
           break;
         default:
@@ -45,11 +45,17 @@ public class Main {
       }
     }
 
-    scanner.close();
+    //scanner.close();
     mapper.writeValue(new File("src/main/resources/output/starwars.json"), starWars);
     mapper.writeValue(new File("src/main/resources/output/hitchhiker.json"), hitchhikers);
     mapper.writeValue(new File("src/main/resources/output/rings.json"), rings);
     mapper.writeValue(new File("src/main/resources/output/marvel.json"), marvel);
+
+    Display.show("StarWars");
+    Display.show("HitchHicker");
+    Display.show("Rings");
+    Display.show("Marvel");
+
   }
 }
 

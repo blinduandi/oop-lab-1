@@ -1,15 +1,18 @@
+package oop.practice;
+
 import java.util.ArrayList;
+/*
 public class Universe {
-    private string name;
+    private String name;
     private ArrayList<Creature> creature = new ArrayList<Creature>();
 
-    public string getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(string name) {
+    public void setName(String name) {
         this.name = name;
     }
 
 
-}
+}*/

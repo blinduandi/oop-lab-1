@@ -1,3 +1,7 @@
+package oop.practice;
+
+import java.util.List;
+
 public class Sorting{
     public static int sort(Creature creature){
         BooleanState isHumanoid = creature.getHumanoidStatus();
