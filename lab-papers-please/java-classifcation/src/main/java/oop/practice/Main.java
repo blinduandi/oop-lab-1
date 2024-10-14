@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class Main {
   public static void main(String[] args) throws IOException {
     ObjectMapper mapper = new ObjectMapper();
-    File inputFile = new File("src/main/resources/test-input.json");
+    File inputFile = new File("src/main/resources/input.json");
     JsonNode data = mapper.readTree(inputFile).get("data");
 
     Universe starWars = new Universe("starWars", new ArrayList<>());
@@ -46,13 +46,13 @@ public class Main {
     }
 
     //scanner.close();
-    mapper.writeValue(new File("src/main/resources/output/starwars.json"), starWars);
-    mapper.writeValue(new File("src/main/resources/output/hitchhiker.json"), hitchhikers);
-    mapper.writeValue(new File("src/main/resources/output/rings.json"), rings);
-    mapper.writeValue(new File("src/main/resources/output/marvel.json"), marvel);
+    mapper.writeValue(new File("D:/oop/oop-lab-1/lab-papers-please/output/starwars.json"), starWars);
+    mapper.writeValue(new File("D:/oop/oop-lab-1/lab-papers-please/output/hitchhiker.json"), hitchhikers);
+    mapper.writeValue(new File("D:/oop/oop-lab-1/lab-papers-please/output/rings.json"), rings);
+    mapper.writeValue(new File("D:/oop/oop-lab-1/lab-papers-please/output/marvel.json"), marvel);
 
     Display.show("StarWars");
-    Display.show("HitchHicker");
+    Display.show("HitchHiker");
     Display.show("Rings");
     Display.show("Marvel");
 

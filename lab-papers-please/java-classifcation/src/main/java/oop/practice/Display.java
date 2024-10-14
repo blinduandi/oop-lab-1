@@ -11,7 +11,7 @@ public class Display {
         System.out.println("\n");
         ObjectMapper mapper = new ObjectMapper();
         String namelower =  name.toLowerCase();
-        File inputFile = new File("src/main/resources/output/"+namelower+".json");
+        File inputFile = new File("D:/oop/oop-lab-1/lab-papers-please/output/"+namelower+".json");
         JsonNode data = mapper.readTree(inputFile).get("individuals");
         System.out.println("---------"+name+"---------");
         for(JsonNode entry : data){

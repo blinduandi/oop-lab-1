@@ -1,1 +1,1 @@
-{"name":"rings","individuals":[{"id":3,"isHumanoid":true,"age":7523}]}
+{"name":"rings","individuals":[{"humanoidStatus":"TRUE","id":9,"isHumanoid":"TRUE","planet":"Earth","age":124,"traits":["SHORT","BULKY"]},{"humanoidStatus":"TRUE","id":19,"isHumanoid":"TRUE","planet":"Earth","age":451,"traits":["BLONDE","POINTY_EARS"]}]}

@@ -24,6 +24,9 @@ public class Creature{
     private int age;
     @JsonProperty("traits")
     private ArrayList<String> traits;
+    public Creature(){
+
+    }
     public Creature(int id, boolean humanoid, String planet, int age, ArrayList<String> traits) {
         this.id = id;
         if(humanoid){
